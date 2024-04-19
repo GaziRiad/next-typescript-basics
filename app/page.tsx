@@ -4,10 +4,9 @@ import React from "react";
 export default function Home() {
   return (
     <main>
-      <CourseGoal
-        title="Lean React + Ts"
-        description="Learn it from the ground up"
-      />
+      <CourseGoal title="Lean React + Ts">
+        <p>Learn it from the ground up</p>
+      </CourseGoal>
     </main>
   );
 }

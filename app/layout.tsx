@@ -11,9 +11,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const fullName: string = "Riad Hallouch";
-  console.log(fullName);
-
   return (
     <html lang="en">
       <body>{children}</body>
