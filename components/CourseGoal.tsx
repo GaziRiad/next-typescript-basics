@@ -1,12 +1,11 @@
 import React from "react";
 
-export default function CourseGoal({
-  title,
-  description,
-}: {
+interface CourseGoalProps {
   title: string;
   description: string;
-}) {
+}
+
+export default function CourseGoal({ title, description }: CourseGoalProps) {
   return (
     <article>
       <div>
