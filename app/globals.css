@@ -61,8 +61,11 @@ input {
   width: 100%;
   padding: 0.5rem;
   background-color: #b4b6c4;
+  color: #333;
+  font-weight: 500;
   border: none;
   border-radius: 4px;
+  margin-bottom: 1.2rem;
 }
 
 form button {
@@ -70,6 +73,7 @@ form button {
   width: 100%;
   padding: 0.75rem;
   margin-top: 1rem;
+  margin-bottom: 2rem;
   background-color: #f7e596;
   border: none;
   border-radius: 4px;
