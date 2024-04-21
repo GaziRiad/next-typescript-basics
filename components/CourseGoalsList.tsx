@@ -22,9 +22,10 @@ export default function CourseGoalsList({
   return (
     <>
       {goals.length >= 4 && (
-        <InfoBox mode="warning">
+        <InfoBox mode="warning" severity="medium">
           <p>
-            You're collecting a lot of goals. Don't put too much on your plate!
+            You&apos;re collecting a lot of goals. Don&apos;t put too much on
+            your plate!
           </p>
         </InfoBox>
       )}

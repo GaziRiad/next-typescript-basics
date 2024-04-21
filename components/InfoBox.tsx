@@ -1,11 +1,21 @@
 import { type ReactNode } from "react";
 
-interface InfoBoxProps {
-  mode: "hint" | "warning";
+type HintBoxProps = {
+  mode: "hint";
   children: ReactNode;
-}
+};
 
-export default function InfoBox({ mode = "hint", children }: InfoBoxProps) {
+type WarningBoxProps = {
+  mode: "warning";
+  severity: "low" | "medium" | "high";
+  children: ReactNode;
+};
+
+type InfoBoxProps = HintBoxProps | WarningBoxProps;
+
+export default function InfoBox(props: InfoBoxProps) {
+  const { mode, children } = props;
+
   if (mode === "hint")
     return (
       <aside className="infobox infobox-hint">
@@ -14,8 +24,9 @@ export default function InfoBox({ mode = "hint", children }: InfoBoxProps) {
       </aside>
     );
 
+  const { severity } = props;
   return (
-    <aside className="infobox infobox-warning warning--medium">
+    <aside className={`infobox infobox-warning warning--${severity}`}>
       <h2>WARNING!</h2>
       <div>{children}</div>
     </aside>
